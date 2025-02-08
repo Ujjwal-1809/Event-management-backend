@@ -12,7 +12,7 @@ const app = express();
 // Middleware
 app.use(
     cors({
-        origin: "/\.netlify\.app$/",
+        origin: "https://67a76406343ba20008e60f42--astounding-travesseiro-bca374.netlify.app",
         credentials: true,
       })
 );
