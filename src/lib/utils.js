@@ -6,10 +6,11 @@ export const generateToken = (userId, res) => {
     });
 
     res.cookie("token", token, {
-        maxAge: 7 * 24 * 60 * 60 * 1000, // converted into MS, (expires in)
-        httpOnly: true, // prevent XSS attacks, cross-site scripting attacks.
-        sameSite: "strict",// CSRF attacks
-        secure: process.env.NODE_ENV !== "development"
+        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
+        httpOnly: true, // Prevents XSS attacks
+        sameSite: "None", // Allows cross-origin requests
+        secure: true // Ensures cookies work over HTTPS
     });
+
     return token;
-}
+};
