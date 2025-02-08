@@ -5,21 +5,14 @@ import { connectDb } from "./lib/db.js";
 import authRoutes from './routes/authRoutes.js';
 import eventRoutes from './routes/eventRoutes.js'
 import cookieParser from 'cookie-parser'
-// import http from "http"; 
-// import { initializeSocket } from "./lib/socket.js";
 
 dotenv.config(); // Load environment variables
 
 const app = express();
-// const server = http.createServer(app); // Create HTTP server
-
-// initializeSocket(server);
-
-
 // Middleware
 app.use(
     cors({
-        origin: "https://67a758235808a00008ea4705--astounding-travesseiro-bca374.netlify.app/",
+        origin: "https://67a758235808a00008ea4705--astounding-travesseiro-bca374.netlify.app",
         credentials: true,
       })
 );
