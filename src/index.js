@@ -19,7 +19,7 @@ const app = express();
 // Middleware
 app.use(
     cors({
-        origin: "http://localhost:5173",
+        origin: "https://67a758235808a00008ea4705--astounding-travesseiro-bca374.netlify.app/",
         credentials: true,
       })
 );
